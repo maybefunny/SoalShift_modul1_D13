@@ -4,6 +4,10 @@
 
     Hint: Base64, Hexdump
 
+    ### Jawab :
+
+    [Source Code](/soal1.sh)
+
     ### Langkah :
 
     1. Buat script untuk decrypt
@@ -31,10 +35,12 @@ Laporan yang diminta berupa:
 
     ### Jawab :
 
+    [Source Code](/soal2.sh)
+
     a. hitung jumlah quantity dari negara-negara pada tahun 2012
     
     ```bash
-    awk -F, '{if($7=="2012") a[$1]+=$10;} END{for(i in a print a[i]"  "i}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 1 | awk '{print $2" "$3}'
+    awk -F, '{if($7=="2012") a[$1]+=$10;} END{for(i in a) print a[i]","i}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 1 | awk -F, '{print $2}'
     ```
 
     #### keterangan :
@@ -47,7 +53,7 @@ Laporan yang diminta berupa:
     b. Tentukan tiga product line yang memberikan penjualan(quantity) terbanyak pada soal poin a.
 
     ```bash
-    awk -F, '{if($1=="United States" && $7=="2012") a[$4]+=$10;} END{for(i in a) print a[i]"  "i}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 3 | awk '{print $2" "$3}'
+    awk -F, '{if($1=="United States" && $7=="2012") a[$4]+=$10;} END{for(i in a) print a[i]","i}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 3 | awk -F, '{print $2}'
     ```
 
     #### keterangan :
@@ -59,7 +65,7 @@ Laporan yang diminta berupa:
     c. Tentukan tiga product yang memberikan penjualan(quantity) terbanyak berdasarkan tiga product line yang didapatkan pada soal poin b.
 
     ```bash
-    awk -F, '{if($1=="United States" && $7=="2012" && $4=="Personal Accessories") a[$5]+=$10;} END{for(i in a) print a[i]"  "i}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 3 | awk '{print $2}'
+    awk -F, '{if($1=="United States" && $7=="2012" && ($4=="Personal Accessories" || $4=="Camping Equipment" || $4=="Outdoor Protection")) a[$6]+=$10;} END{for(i in a) print a[i]","i}' WA_Sales_Products_2012-14.csv | sort -n -r | head -n 3 | awk -F, '{print $2}'
     ```
 
     #### keterangan :
@@ -82,7 +88,7 @@ sebagai berikut:
 
     ### Jawab :
 
-    [Source Code]()
+    [Source Code](/soal3.sh)
 
     ### langkah-langkah :
     - pastikan password baru tidak sama dengan yang sudah ada
@@ -106,7 +112,7 @@ sebagai berikut:
 
     ### jawab :
 
-    [Source Code]()
+    [Source Code](/soal4.sh)
 
     ### langkah-langkah :
     - backup & encrypt :
@@ -137,7 +143,7 @@ kriteria berikut:
 
     ### jawab :
 
-    [Source Code]()
+    [Source Code](/soal5.sh)
 
     ### langkah-langkah :
     - filter syslog menggunakan awk dengan filter-filter berikut :
