@@ -71,7 +71,7 @@ Laporan yang diminta berupa:
     #### keterangan :
     - perbedaan solusi antara poin b dan c terletak pada
         - syarat penghitungan frequency, syaratnya ditambah dengan nama-nama product line pada poin b.
-        - indeks penghitungan frequency yang awalnya kolom 4 (nama product line) sekarang menjadi kolom 5 (nama product).
+        - indeks penghitungan frequency yang awalnya kolom 4 (nama product line) sekarang menjadi kolom 6 (nama product).
 
 3. Buatlah sebuah script bash yang dapat menghasilkan password secara acak
 sebanyak 12 karakter yang terdapat huruf besar, huruf kecil, dan angka. Password
