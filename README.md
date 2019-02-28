@@ -20,8 +20,7 @@
     
     2. buat cronjob yang menjalankan script decrypt dengan waktu sesuai permintaan soal
     
-            14 14 *  2  5   /bin/bash /directory/to/script/soal1.sh
-            14 14 14 2  *   /bin/bash /directory/to/script/soal1.sh
+            14 14 14  2  5   /bin/bash /directory/to/script/soal1.sh
 
 2. Anda merupakan pegawai magang pada sebuah perusahaan retail, dan anda diminta
 untuk memberikan laporan berdasarkan file WA_Sales_Products_2012-14.csv.
@@ -92,8 +91,8 @@ sebagai berikut:
 
     ### langkah-langkah :
     - pastikan password baru tidak sama dengan yang sudah ada
-        - generate password baru.
         - dapatkan list password yang sudah ada dengan mengambilnya dari file `password*.txt`.
+        - generate password baru (mengandung numeric, uppercase, dan lowercase).
         - bandingkan password baru dengan setiap password pada list, jika sama maka generate password baru dan ulangi langkah ini, jika beda maka password baru valid.
     - cari urutan nama file yang tepat.
     - generate file dengan isi password yang valid.
