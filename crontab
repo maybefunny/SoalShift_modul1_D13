@@ -1,4 +1,3 @@
-14 14 * 2 5     /bin/bash /path/to/script/soal1.sh
-14 14 14 2 *    /bin/bash /path/to/script/soal1.sh
+14 14 14 2 5     /bin/bash /path/to/script/soal1.sh
 0 * * * *       /bin/bash /path/to/script/soal4.sh
 2-30/6 * * * *  /bin/bash /path/to/script/soal5.sh
